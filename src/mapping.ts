@@ -1,4 +1,4 @@
-import { Bytes, JSONValueKind, ipfs, json, log } from '@graphprotocol/graph-ts'
+import { Bytes, JSONValueKind, ipfs, json, log, ethereum } from '@graphprotocol/graph-ts'
 import {
   Contract,
   Approval,
@@ -84,6 +84,7 @@ export function handleTransfer(event: TransferEvent): void {
   let tokenId = event.params.tokenId.toString()
 
   if (event.params.from.toHex() == ADDRESS_ZERO) {
+
     // Mint token
     let item = new Artwork(tokenId)
     item.creator = account.id
