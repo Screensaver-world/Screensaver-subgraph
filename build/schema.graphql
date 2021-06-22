@@ -44,20 +44,3 @@ type BidLog @entity {
   accepted: Boolean!
   canceled: Boolean!
 }
-
-type _Schema_
-  @fulltext(
-    name: "artworkSearch",
-    language: en
-    algorithm: rank,
-    include: [
-      {
-        entity: "Artwork",
-        fields: [
-          { name: "name" },
-          { name: "description" }
-          { name: "tagsString" }
-        ]
-      }
-    ]
-  )

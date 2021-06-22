@@ -180,18 +180,18 @@ function readArtworkMetadata(item: Artwork): Artwork {
 
         }
 
-        if (data.isSet('tags')) {
+        // if (data.isSet('tags')) {
 
-          if (data.get('tags').toArray() !== []) {
-            item.tags = data
-            .get('tags')
-            .toArray()
-            .map<string>(t => t.toString())
+        //   if (data.get('tags').toArray() !== []) {
+        //     item.tags = data
+        //     .get('tags')
+        //     .toArray()
+        //     .map<string>(t => t.toString())
 
-            item.tagsString = item.tags.join(" ")
-          }
+        //     item.tagsString = item.tags.join(" ")
+        //   }
 
-        }
+        // }
 
       }
     }
