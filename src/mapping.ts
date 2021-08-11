@@ -132,7 +132,7 @@ export function handleTransfer(event: TransferEvent): void {
 function readArtworkMetadata(item: Artwork): Artwork {
   let hash = getIpfsHash(item.metadataUri)
   if (hash != null) {
-    item.metadataUri = `https://ipfs.io/ipfs/${hash}`
+    item.metadataUri = "https://ipfs.io/ipfs/" + hash
 
     let raw = ipfs.cat(hash)
 
