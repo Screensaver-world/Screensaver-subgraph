@@ -7,7 +7,7 @@ dataSources:
     network: matic
     source:
       address: "0x486ca491C9A0a9ACE266AA100976bfefC57A0Dd4"
-      startBlock: 15000000
+      startBlock: 15307034
       abi: Contract
     mapping:
       kind: ethereum/events
